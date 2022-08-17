@@ -1,0 +1,25 @@
+import pandas as pd
+df1=pd.DataFrame()
+df1['Successful']=[41,33]
+df1['Unsuccessful']=[59,67]
+df=df.rename(index={0:"Observed",1:"Expected"})
+df['difference']=df['Observed'] - df['Expected'] 
+df['dsq'] = df['difference']**2
+chitest=sum(df['difference squared']/df['Expected'])
+if chitest<3.84:
+    print("We do not reject the null hypothesis")
+else:
+    print("We reject the null hypothesis")
+   
+
+df=pd.DataFrame()
+df['Successful']=[50,33]
+df['Unsuccessful']=[55,52]
+df=df.rename(index={0:"Observed",1:"Expected"})
+df['difference']=df['Observed'] - df['Expected'] 
+df['dsq'] = df['difference']**2
+chitest=sum(df['dsq']/df['Expected'])
+if chitest<3.84:
+    print("We do not reject the null hypothesis")
+else:
+    print("We reject the null hypothesis") 
