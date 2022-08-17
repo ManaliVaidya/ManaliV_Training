@@ -1,0 +1,16 @@
+import statistics
+
+a=np.array([1,4,8])
+a=a.tolist()
+type(a)
+import statistics
+mean=statistics.mean(a)
+median=statistics.median(a)
+var=statistics.variance(a)
+diff=mean-median
+std=sqrt(var)
+std
+def skew(a):
+    skew=3*diff/std
+    return skew
+skew(a)
