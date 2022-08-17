@@ -1,1 +1,26 @@
+import numpy as np
+from math import sqrt
+a=np.array([[1,2,3],[4,7,9]])
+x=np.array([4,5,6])
+y=np.array([1,-1])
+def varz(a):
+    Px=sum(P,axis=0)
+    Py=sum(P,axis=1)
 
+    Ex = 0
+    for i in range(3):
+        Ex+=Px[i]*x[i]
+    Ey = 0
+    for i in range(2):
+        Ey+=Py[i]*y[i]
+
+    varx = 0
+    for i in range(3):
+        varx+=Px[i]*(x[i] - Ex)**2
+    stdx = sqrt(varx)
+    vary = 0
+    for i in range(2):
+        vary+=Py[i]*(y[i] - Ey)**2
+    stdy = sqrt(vary)
+
+    return(vary, varx, stdx, stdy)
