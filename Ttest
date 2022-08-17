@@ -2,6 +2,14 @@ import pandas as pd
 data=pd.read_csv(r"C:\Users\MVASANTVAIDYA\Documents\TRaining\Score.csv")
 df=data
 import scipy
+import statistics
 from scipy import stats
-stats.ttest_rel(df['Before Course'], df['After Course'])
-#RejectHo-Course is useful
+from math import sqrt
+df['Difference']=df['Before Course']-df['After Course']
+df['Dsq']=df['Difference']**2
+tnum=statistics.mean(df['Difference'])
+tden=(sqrt(statistics.variance(df['Difference'])))/sqrt(len(df['Difference']))
+
+t=tnum/tden
+t
+#RejectHO
