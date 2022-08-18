@@ -1,0 +1,15 @@
+from numpy import random
+import numpy as np
+age =np.random.normal(60,5,10)
+devop=np.random.normal(3500,200,10)
+javadop=np.random.normal(5000,250,10)
+javadop.sort()
+devop.sort()
+age.sort()
+from matplotlib import pyplot as plt
+plt.style.available
+plt.plot(age_x,devop,label="All devep")
+plt.plot(age_x,javadop,label="All Java ")
+plt.xlabel("Ages")
+plt.ylabel("Median Salary (USD)")
+plt.legend()
