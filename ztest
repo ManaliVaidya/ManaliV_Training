@@ -1,0 +1,25 @@
+from numpy import random
+import pandas as pd
+import csv
+x = random.normal(size=(1000))
+x=pd.DataFrame(x)
+x.to_csv('C:\\Users\\MVASANTVAIDYA\\Documents\\TRaining\\csv1.csv',index=False)
+df=pd.read_csv(r"C:\Users\MVASANTVAIDYA\Documents\TRaining\csv1.csv")
+x=df
+from math import sqrt
+import statistics
+mean=0
+mean
+std=1
+std
+
+
+Smean=statistics.mean(x['0'])
+Smean
+Z=(mean-Smean)/std
+if Z>1.96:
+    print("We reject Null Hypothesis")
+else:
+    print("We do not reject Null Hypothesis")
+
+
